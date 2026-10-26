@@ -5,35 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kido's Codesphere</title>
 <style>
+    * {
+        box-sizing: border-box;
+    }
     body {
-        background: #101827;
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #0f172a, #312e81, #111827);
         color: white;
         font-family: Arial, sans-serif;
         text-align: center;
         padding: 50px 20px;
     }
     h1 {
-        color: #00e5ff;
-        font-size: 32px;
-    }
-    p {
-        font-size: 18px;
-        line-height: 1.7;
+        color: #38bdf8;
+        font-size: clamp(30px, 7vw, 44px);
+        margin-top: 30px;
     }
     .card {
-        background: #1e293b;
-        padding: 25px;
-        border-radius: 15px;
-        max-width: 500px;
-        margin: 30px auto;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(56, 189, 248, 0.4);
+        padding: 30px 20px;
+        border-radius: 20px;
+        max-width: 550px;
+        margin: 35px auto;
+        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
     }
-    button {
-        background: #00e5ff;
-        color: #101827;
-        border: none;
-        padding: 14px 24px;
-        border-radius: 8px;
+    h2 {
+        color: #a5f3fc;
+    }
+    p {
+        font-size: 17px;
+        line-height: 1.8;
+    }
+    .button {
+        display: inline-block;
+        margin-top: 20px;
+        background: linear-gradient(90deg, #38bdf8, #818cf8);
+        color: #0f172a;
+        padding: 15px 25px;
+        border-radius: 30px;
         font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+    .button:hover {
+        transform: scale(1.05);
+    }
+    footer {
+        margin-top: 35px;
+        color: #cbd5e1;
     }
 </style>
 </head>
@@ -44,9 +67,9 @@
     <p>Welcome to my world of coding.</p>
     <p>I'm learning to build amazing things with technology.</p>
     <a href="about.html" class="button">Explore My Website 🚀</a>
-        Click Me!
-    </button>
 </div>
-<p>🌟 Learning today, building tomorrow.</p>
+<footer>
+    🌟 Learning today, building tomorrow.
+</footer>
 </body>
 </html>
