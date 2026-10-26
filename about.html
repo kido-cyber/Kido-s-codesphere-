@@ -3,58 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Kido | Codesphere</title>
+
+    <title>About Kido | Kido's Codesphere</title>
+
+    <meta name="description" content="Welcome to Kido's Codesphere, where creativity meets technology. Discover my coding journey and projects.">
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #0f172a, #312e81);
             color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
-
-        h1 {
-            color: #38bdf8;
-            font-size: 35px;
-        }
-
-        p {
-            font-size: 18px;
             line-height: 1.7;
         }
 
-        .card {
-            max-width: 600px;
-            margin: 30px auto;
-            padding: 25px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 20px;
+        header {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #334155;
         }
 
-        a {
+        header a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 55px 20px 35px;
+        }
+
+        .hero h1 {
+            font-size: clamp(30px, 6vw, 46px);
+            color: #38bdf8;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 15px auto;
+        }
+
+        .card {
+            max-width: 700px;
+            margin: 25px auto;
+            padding: 25px;
+            width: calc(100% - 30px);
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid #475569;
+            border-radius: 18px;
+        }
+
+        h2 {
+            color: #a5f3fc;
+        }
+
+        .button {
             display: inline-block;
-            margin-top: 20px;
-            padding: 14px 25px;
+            margin: 12px 8px 0;
+            padding: 12px 22px;
             background: #38bdf8;
             color: #0f172a;
             text-decoration: none;
-            border-radius: 30px;
+            border-radius: 25px;
             font-weight: bold;
+        }
+
+        .secondary {
+            background: #a5b4fc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 15px;
+            color: #cbd5e1;
+        }
+
+        @media (max-width: 500px) {
+            .hero {
+                padding-top: 35px;
+            }
+
+            .card {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="card">
-        <h1>Welcome to Kido's Codesphere! 🚀</h1>
 
-        <p>This is my coding space, where creativity meets technology.</p>
+    <header>
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </header>
 
-        <p>I'm learning to build websites and turn ideas into reality.</p>
+    <section class="hero">
+        <h1>Welcome to My World! 🚀</h1>
 
-        <a href="index.html">⬅ Back to Home</a>
-    </div>
+        <p>
+            Welcome to Kido's Codesphere,
+            where creativity meets technology.
+        </p>
+
+        <a class="button" href="#projects">Explore My Projects</a>
+    </section>
+
+    <section class="card" id="about">
+        <h2>👨‍💻 About Me</h2>
+
+        <p>
+            Hey, I'm Kido! Welcome to my coding space.
+            I'm learning web development and exploring
+            how to turn creative ideas into real websites.
+        </p>
+
+        <p>
+            This is where I share my learning journey,
+            experiment with new ideas, and build my future
+            in technology.
+        </p>
+    </section>
+
+    <section class="card" id="projects">
+        <h2>🛠️ My Projects</h2>
+
+        <p><strong>Project 1: Kido's Codesphere</strong></p>
+
+        <p>
+            My first website, built with HTML and CSS
+            and published using GitHub Pages.
+        </p>
+
+        <p>
+            More projects will appear here as I learn
+            and build new things!
+        </p>
+    </section>
+
+    <section class="card" id="contact">
+        <h2>📱 Contact Me</h2>
+
+        <p>
+            Want to connect or talk about a project?
+            You can reach me on WhatsApp.
+        </p>
+
+        <a
+            class="button"
+            href="https://wa.me/2349074761370"
+            target="_blank"
+            rel="noopener noreferrer">
+            Chat on WhatsApp
+        </a>
+
+        <a class="button secondary" href="index.html">
+            ⬅ Back to Home
+        </a>
+    </section>
+
+    <footer>
+        <p>🌟 Learning today, building tomorrow.</p>
+        <p>© 2026 Kido's Codesphere</p>
+    </footer>
+
 </body>
 </html>
