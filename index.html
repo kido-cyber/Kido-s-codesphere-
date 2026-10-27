@@ -1,175 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="_F2qoB42TNTbihEcegzMv1Hym-hGASCbtffs5HN67ek" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#080b12">
-    <meta name="description" content="Welcome to Kido's Codesphere — a growing developer portfolio exploring web development, technology and creative digital projects.">
-    <title>Kido's Codesphere | Future in Code</title>
+    <meta name="theme-color" content="#080610">
+    <meta name="description" content="Welcome to Kido's Codesphere, created by Kido. Explore web development, AI experiments, digital projects and innovative technology.">
+    <meta name="google-site-verification" content="_F2qoB42TNTbihEcegzMv1Hym-hGASCbtffs5HN67ek">
+    <title>Kido's Codesphere | Software, Web Development & AI</title>
     <style>
         :root {
-            --bg: #080b12;
-            --panel: #101722;
-            --green: #43ff9b;
-            --purple: #a78bfa;
-            --text: #f3f7fb;
-            --muted: #a3afbd;
-            --border: rgba(67, 255, 155, 0.18);
+            --bg: #080610;
+            --panel: #110d20;
+            --purple: #a855f7;
+            --pink: #e879f9;
+            --blue: #818cf8;
+            --text: #f8f7ff;
+            --muted: #aaa4bd;
+            --border: rgba(168, 85, 247, .25);
         }
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: var(--bg);
+            background:
+                radial-gradient(ellipse at 80% 15%, rgba(126, 34, 206, .18), transparent 38%),
+                radial-gradient(ellipse at 5% 55%, rgba(79, 70, 229, .12), transparent 35%),
+                var(--bg);
             color: var(--text);
             line-height: 1.7;
         }
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+        a { color: inherit; text-decoration: none; }
         .container {
-            width: min(1100px, 90%);
+            width: min(1120px, 90%);
             margin: auto;
         }
         header {
             position: sticky;
             top: 0;
             z-index: 10;
-            background: rgba(8, 11, 18, 0.94);
+            background: rgba(8, 6, 16, .9);
             border-bottom: 1px solid var(--border);
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(16px);
         }
         nav {
-            min-height: 72px;
+            min-height: 76px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 16px;
+            gap: 20px;
         }
         .logo {
             font-size: 1.15rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
+            font-weight: 900;
+            letter-spacing: -.5px;
         }
         .logo span {
-            color: var(--green);
+            color: var(--pink);
+            text-shadow: 0 0 18px rgba(232, 121, 249, .5);
         }
         .nav-links {
             display: flex;
-            gap: 20px;
-            font-size: 0.9rem;
+            align-items: center;
+            gap: 22px;
+            font-size: .9rem;
             color: var(--muted);
         }
-        .nav-links a:hover {
-            color: var(--green);
+        .nav-links a:hover { color: var(--pink); }
+        .nav-links .nav-cta {
+            color: white;
+            padding: 9px 15px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
         }
         .hero {
-            min-height: 80vh;
+            min-height: 78vh;
             display: grid;
-            grid-template-columns: 1.3fr 0.7fr;
+            grid-template-columns: 1.2fr .8fr;
             align-items: center;
-            gap: 45px;
-            padding-top: 70px;
-            padding-bottom: 70px;
+            gap: 50px;
+            padding-top: 75px;
+            padding-bottom: 75px;
         }
         .eyebrow {
-            color: var(--green);
+            color: var(--pink);
             font-family: monospace;
             letter-spacing: 2px;
-            font-size: 0.9rem;
-            margin-bottom: 18px;
+            font-size: .82rem;
+            margin-bottom: 20px;
         }
         h1 {
-            font-size: clamp(2.7rem, 7vw, 5.2rem);
-            line-height: 1.05;
+            font-size: clamp(2.8rem, 7vw, 5.4rem);
+            line-height: 1.04;
             letter-spacing: -3px;
             margin-bottom: 24px;
         }
         h1 span {
-            color: var(--green);
-            text-shadow: 0 0 25px rgba(67, 255, 155, 0.18);
+            background: linear-gradient(100deg, #c084fc, #f0abfc, #818cf8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 0 20px rgba(168, 85, 247, .18));
         }
-        .hero p {
+        .hero-copy {
             color: var(--muted);
             max-width: 590px;
-            margin-bottom: 28px;
+            margin-bottom: 30px;
         }
         .buttons {
             display: flex;
             flex-wrap: wrap;
-            gap: 14px;
+            gap: 13px;
         }
         .button {
             display: inline-block;
             padding: 12px 20px;
-            border: 1px solid var(--green);
-            border-radius: 8px;
+            border: 1px solid var(--border);
+            border-radius: 9px;
             font-weight: 700;
-            transition: 0.25s ease;
+            transition: .25s ease;
         }
         .button.primary {
-            background: var(--green);
-            color: #07110b;
+            background: linear-gradient(100deg, #9333ea, #c026d3);
+            border-color: transparent;
+            color: white;
+            box-shadow: 0 0 25px rgba(168, 85, 247, .2);
         }
+        .button.secondary { background: rgba(255,255,255,.03); }
         .button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 0 22px rgba(67, 255, 155, 0.2);
-        }
-        .button.secondary {
-            color: var(--green);
+            box-shadow: 0 0 25px rgba(168, 85, 247, .3);
         }
         .terminal {
-            background: linear-gradient(145deg, #111a27, #0a0f17);
-            border: 1px solid rgba(167, 139, 250, 0.35);
-            border-radius: 16px;
+            background: linear-gradient(145deg, #171027, #0c0915);
+            border: 1px solid rgba(192, 132, 252, .4);
+            border-radius: 18px;
             overflow: hidden;
-            box-shadow: 0 0 45px rgba(87, 64, 170, 0.13);
-            transform: rotate(1deg);
+            box-shadow: 0 0 60px rgba(126, 34, 206, .17);
         }
         .terminal-top {
-            padding: 13px 16px;
-            border-bottom: 1px solid #26303d;
+            padding: 14px 17px;
+            border-bottom: 1px solid #30223e;
             color: var(--muted);
             font-family: monospace;
-            font-size: 0.85rem;
+            font-size: .85rem;
         }
-        .dots {
-            color: var(--green);
-            margin-right: 8px;
-        }
+        .dots { color: var(--pink); margin-right: 8px; }
         .terminal-content {
             padding: 25px 20px;
             font-family: monospace;
-            font-size: 0.9rem;
+            font-size: .9rem;
             overflow-wrap: anywhere;
         }
-        .terminal-content p {
-            margin: 9px 0;
-            color: var(--muted);
-        }
-        .code-green {
-            color: var(--green);
-        }
-        .code-purple {
-            color: var(--purple);
-        }
+        .terminal-content p { margin: 10px 0; color: var(--muted); }
+        .code-purple { color: #c084fc; }
+        .code-pink { color: #f0abfc; }
+        .code-blue { color: #93c5fd; }
         section {
-            padding: 80px 0;
-            scroll-margin-top: 80px;
+            padding: 78px 0;
+            scroll-margin-top: 85px;
         }
-        .section-heading {
-            margin-bottom: 35px;
-        }
+        .section-heading { margin-bottom: 32px; }
         .section-heading small {
-            color: var(--green);
+            color: var(--pink);
             font-family: monospace;
             letter-spacing: 2px;
         }
@@ -178,61 +174,54 @@
             line-height: 1.2;
             margin-top: 8px;
         }
+        .gradient-text {
+            background: linear-gradient(100deg, #c084fc, #f0abfc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
         .section-intro {
             max-width: 650px;
             color: var(--muted);
             margin-top: 12px;
         }
-        .about-box,
-        .card,
-        .contact-box {
-            background: var(--panel);
+        .about-box, .card, .contact-box {
+            background: linear-gradient(145deg, rgba(25, 17, 42, .95), rgba(12, 9, 21, .95));
             border: 1px solid var(--border);
-            border-radius: 14px;
+            border-radius: 15px;
             padding: 26px;
         }
-        .about-box p {
-            color: var(--muted);
-            margin-top: 10px;
-        }
+        .about-box p { color: var(--muted); margin-top: 10px; }
         .grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 18px;
         }
         .card {
-            transition: transform 0.25s, border-color 0.25s;
+            transition: transform .25s, border-color .25s;
         }
         .card:hover {
             transform: translateY(-5px);
-            border-color: var(--green);
+            border-color: var(--purple);
         }
-        .card-icon {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-        .card h3 {
-            margin-bottom: 10px;
-        }
-        .card p {
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
+        .card-icon { font-size: 1.8rem; margin-bottom: 15px; }
+        .card h3 { margin-bottom: 10px; }
+        .card p { color: var(--muted); font-size: .95rem; }
         .tag {
             display: inline-block;
             margin-top: 18px;
             padding: 4px 9px;
             border-radius: 5px;
-            color: var(--green);
-            background: rgba(67, 255, 155, 0.08);
-            font-size: 0.78rem;
+            color: #e9b7ff;
+            background: rgba(168, 85, 247, .12);
+            font-size: .76rem;
             font-family: monospace;
         }
         .contact-box {
             text-align: center;
             padding: 45px 25px;
             background:
-                radial-gradient(ellipse at top, rgba(167,139,250,0.1), transparent 60%),
+                radial-gradient(ellipse at top, rgba(168,85,247,.15), transparent 65%),
                 var(--panel);
         }
         .contact-box p {
@@ -245,168 +234,149 @@
             padding: 25px 0;
             color: var(--muted);
             text-align: center;
-            font-size: 0.85rem;
+            font-size: .85rem;
         }
-        footer span {
-            color: var(--green);
-        }
+        footer span { color: var(--pink); }
         @media (max-width: 760px) {
+            nav { padding: 14px 0; align-items: flex-start; }
+            .nav-links { gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
+            .nav-links .nav-cta { padding: 5px 9px; }
             .hero {
                 grid-template-columns: 1fr;
                 gap: 35px;
                 min-height: auto;
-                padding-top: 75px;
+                padding-top: 65px;
             }
-            h1 {
-                letter-spacing: -1.5px;
-            }
-            .terminal {
-                transform: none;
-            }
-            .grid {
-                grid-template-columns: 1fr;
-            }
-            .nav-links {
-                gap: 12px;
-                font-size: 0.8rem;
-            }
-            .logo {
-                font-size: 1rem;
-            }
-            nav {
-                min-height: 65px;
-            }
-            section {
-                padding: 60px 0;
-            }
+            h1 { letter-spacing: -1.5px; }
+            .grid { grid-template-columns: 1fr; }
+            section { padding: 58px 0; }
         }
         @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
-            *, *::before, *::after {
-                transition-duration: 0.01ms !important;
-            }
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { transition-duration: .01ms !important; }
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <a class="logo" href="#home">KIDO<span>.CODES</span></a>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="hero container" id="home">
-            <div>
-                <div class="eyebrow">&gt; WELCOME TO MY DIGITAL WORLD_</div>
-                <h1>Building the <span>Future</span><br>One Line at a Time.</h1>
-                <p>
-                    Welcome to Kido's Codesphere — my corner of the digital world.
-                    I'm learning, creating and exploring web development, one project
-                    at a time. This is where ideas meet code.
-                </p>
-                <div class="buttons">
-                    <a class="button primary" href="#projects">Explore My Work ↗</a>
-                    <a class="button secondary" href="#about">Discover My Story</a>
-                </div>
-            </div>
-            <div class="terminal" aria-label="Decorative code window">
-                <div class="terminal-top"><span class="dots">● ● ●</span> kido@codesphere:~</div>
-                <div class="terminal-content">
-                    <div><span class="code-purple">const</span> developer = {</div>
-                    <p> &nbsp; name: <span class="code-green">"Kido"</span>,</p>
-                    <p> &nbsp; passion: <span class="code-green">"Technology"</span>,</p>
-                    <p> &nbsp; learning: <span class="code-green">"Web Development"</span>,</p>
-                    <p> &nbsp; mindset: <span class="code-green">"Never Give Up"</span></p>
-                    <div>};</div>
-                    <p class="code-green">// The journey starts here_</p>
-                </div>
-            </div>
-        </section>
-        <section id="about">
-            <div class="container">
-                <div class="section-heading">
-                    <small>01 / ABOUT ME</small>
-                    <h2>Curious mind. <span class="code-green">Creative code.</span></h2>
-                    <p class="section-intro">
-                        Every great developer starts somewhere. I'm building my skills,
-                        learning how websites work, and turning ideas into real digital experiences.
-                    </p>
-                </div>
-                <div class="about-box">
-                    <h3><span class="code-green">&gt;</span> My Mission</h3>
-                    <p>
-                        Kido's Codesphere is my journey into technology. I'm exploring
-                        HTML, CSS and web design while working toward creating useful,
-                        creative and professional websites. Every line of code is another
-                        step forward.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section id="projects">
-            <div class="container">
-                <div class="section-heading">
-                    <small>02 / MY WORK</small>
-                    <h2>Projects in <span class="code-green">progress.</span></h2>
-                    <p class="section-intro">
-                        A growing collection of ideas, experiments and digital creations.
-                        More projects will appear here as I build them.
-                    </p>
-                </div>
-                <div class="grid">
-                    <article class="card">
-                        <div class="card-icon">🌐</div>
-                        <h3>My First Website</h3>
-                        <p>A personal website built with HTML and CSS, published on the web.</p>
-                        <span class="tag">HTML · CSS</span>
-                    </article>
-                    <article class="card">
-                        <div class="card-icon">🎨</div>
-                        <h3>Creative Web Design</h3>
-                        <p>Exploring colors, layouts and modern designs for the digital world.</p>
-                        <span class="tag">DESIGN · LEARNING</span>
-                    </article>
-                    <article class="card">
-                        <div class="card-icon">🚀</div>
-                        <h3>Next Big Idea</h3>
-                        <p>This space is waiting for the next project I bring to life.</p>
-                        <span class="tag">COMING SOON</span>
-                    </article>
-                </div>
-            </div>
-        </section>
-        <section id="contact">
-            <div class="container">
-                <div class="contact-box">
-                    <div class="eyebrow">03 / LET'S CONNECT</div>
-                    <h2>Have an idea? <span class="code-green">Let's talk.</span></h2>
-                    <p>
-                        Want to connect or discuss a project? Reach out to me on WhatsApp.
-                        I'm always learning and looking forward to new opportunities.
-                    </p>
-                    <a class="button primary"
-                       href="https://wa.me/2349074761370"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Contact Me on WhatsApp ↗
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-            <p>© 2026 <span>Kido's Codesphere</span>. Built with curiosity and code.</p>
-            <p>Keep learning. Keep creating. Keep moving forward.</p>
+<header>
+    <nav class="container">
+        <a class="logo" href="#home">KIDO<span>.CODES</span></a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a class="nav-cta" href="#projects">Explore ↗</a>
         </div>
-    </footer>
+    </nav>
+</header>
+<main>
+    <section class="hero container" id="home">
+        <div>
+            <div class="eyebrow">&gt; WELCOME TO KIDO'S CODESPHERE_</div>
+            <h1>A new world<br>of <span>technology.</span></h1>
+            <p class="hero-copy">
+                Welcome to Kido's Codesphere, created by Kido.
+                Explore my journey through web development, AI-powered
+                experiments and creative digital projects. Big ideas
+                start with a single line of code.
+            </p>
+            <div class="buttons">
+                <a class="button primary" href="#projects">Explore Projects ↗</a>
+                <a class="button secondary" href="#about">Meet Kido</a>
+            </div>
+        </div>
+        <div class="terminal" aria-label="Decorative code window">
+            <div class="terminal-top"><span class="dots">● ● ●</span> kido@codesphere:~</div>
+            <div class="terminal-content">
+                <div><span class="code-purple">const</span> creator = {</div>
+                <p>&nbsp; name: <span class="code-pink">"Kido"</span>,</p>
+                <p>&nbsp; brand: <span class="code-pink">"Codesphere"</span>,</p>
+                <p>&nbsp; interests: <span class="code-blue">["Web", "AI"]</span>,</p>
+                <p>&nbsp; mindset: <span class="code-pink">"Keep Building"</span></p>
+                <div>};</div>
+                <p class="code-purple">// Ideas become reality_</p>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <div class="section-heading">
+                <small>01 / ABOUT THE CREATOR</small>
+                <h2>Curious mind. <span class="gradient-text">Bold ideas.</span></h2>
+                <p class="section-intro">
+                    I'm Kido, the creator behind Kido's Codesphere.
+                    I'm learning, experimenting and building digital projects
+                    while growing my skills in technology.
+                </p>
+            </div>
+            <div class="about-box">
+                <h3><span class="code-purple">&gt;</span> The Mission</h3>
+                <p>
+                    Kido's Codesphere is my personal technology brand and
+                    developer portfolio. This website documents my progress
+                    in web development and showcases projects as they grow.
+                    The goal is to turn creative ideas into useful digital experiences.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="container">
+            <div class="section-heading">
+                <small>02 / PROJECT EXPLORER</small>
+                <h2>Ideas becoming <span class="gradient-text">reality.</span></h2>
+                <p class="section-intro">
+                    Explore my current work and experiments. This collection
+                    will grow as I build and publish more projects.
+                </p>
+            </div>
+            <div class="grid">
+                <article class="card">
+                    <div class="card-icon">🌐</div>
+                    <h3>Kido's Codesphere</h3>
+                    <p>My personal website for sharing my technology journey and web projects.</p>
+                    <span class="tag">HTML · CSS · WEB</span>
+                </article>
+                <article class="card">
+                    <div class="card-icon">🤖</div>
+                    <h3>Kido Nova</h3>
+                    <p>My branded AI assistant project, built using an existing AI service.</p>
+                    <a class="tag" href="https://kido-ai-9bzcyh.v2.appdeploy.ai/" target="_blank" rel="noopener noreferrer">OPEN AI ASSISTANT ↗</a>
+                </article>
+                <article class="card">
+                    <div class="card-icon">💡</div>
+                    <h3>What's Next?</h3>
+                    <p>A space for new web experiments, creative ideas and future projects.</p>
+                    <span class="tag">IN PROGRESS</span>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <div class="contact-box">
+                <div class="eyebrow">03 / LET'S CONNECT</div>
+                <h2>Let's build something <span class="gradient-text">great.</span></h2>
+                <p>
+                    Want to connect or talk about a project?
+                    Reach out to Kido's Codesphere on WhatsApp.
+                </p>
+                <a class="button primary"
+                   href="https://wa.me/2349074761370"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Contact on WhatsApp ↗
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="container">
+        <p>© 2026 <span>Kido's Codesphere</span>. Built with curiosity and code.</p>
+        <p>Keep learning. Keep creating. Keep moving forward.</p>
+    </div>
+</footer>
 </body>
 </html>
